@@ -36,4 +36,3 @@ setInterval(function() {
 
 
 timeBlock();
-saveLocally();
