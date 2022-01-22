@@ -6,9 +6,9 @@ A scheduling application to help organize your day.
 
 # Built with
 
-*HTML
-*CSS
-*JAVASCRIPT
+- HTML
+- CSS
+- JAVASCRIPT
 
 
 # Website
