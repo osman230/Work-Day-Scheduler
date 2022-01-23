@@ -22,16 +22,24 @@ function timeBlock() {
 $(".saveBtn").on("click", function() {
     var currentHour = $(this).parent().attr("id");
     var currentTask = $(this).siblings(".currentTask").val();
+
+    localStorage.setItem(currentHour, currentTask)
 })
 
+function saveTask() {
+    $(".time-block").each(function() {
+        var currenthour = $(this).attr("id");
+        $(this).children("currentTask").val(localStorage.getItem(currenthour));
+    })
+}
 
 // audit task due dates every 30 minutes
-setInterval(function() {
-  $(".card .list-group-item").each(function() {
-    auditTask($(this));
-  });
-}, 1800000);
+// setInterval(function() {
+//   $(".card .list-group-item").each(function() {
+//     auditTask($(this));
+//   });
+// }, 1800000);
 
 
-
+saveTask();
 timeBlock();
